@@ -1,0 +1,138 @@
+@import url("https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap");
+@mixin flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.light {
+  .main_header {
+    @include flex();
+    justify-content: space-between;
+    height: 12vh;
+    background-color: #e7e7de;
+    box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.2);
+
+    .navLinks {
+      @include flex();
+      justify-content: flex-end;
+      padding-right: 170px;
+      flex: 1;
+      .list {
+        list-style: none;
+        @include flex();
+        li {
+          font-family: "Kaushan Script", cursive;
+          margin-left: 35px;
+          color: black;
+          .link {
+            font-family: "Kaushan Script", cursive;
+            text-decoration: none;
+            color: black;
+          }
+        }
+      }
+    }
+
+    .theme {
+      @include flex();
+      justify-content: flex-start;
+      flex: 1;
+      padding-left: 130px;
+      h1 {
+        margin-right: 50px;
+        font-family: "Kaushan Script", cursive;
+      }
+      .btn {
+        text-transform: lowercase;
+        font-family: "Kaushan Script", cursive;
+        font-size: 15px;
+      }
+    }
+  }
+}
+
+.dark {
+  .main_header {
+    @include flex();
+    justify-content: space-between;
+    height: 12vh;
+    background-color: black;
+    opacity: 0.8;
+    box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.2);
+
+    .navLinks {
+      @include flex();
+      justify-content: flex-end;
+      padding-right: 170px;
+      flex: 1;
+
+      .list {
+        list-style: none;
+        @include flex();
+
+        li {
+          font-family: "Kaushan Script", cursive;
+          margin-left: 35px;
+          color: #e7e7de;
+
+          .link {
+            font-family: "Kaushan Script", cursive;
+            text-decoration: none;
+            color: #e7e7de;
+          }
+        }
+      }
+    }
+
+    .theme {
+      @include flex();
+      justify-content: flex-start;
+      flex: 1;
+      padding-left: 130px;
+
+      h1 {
+        margin-right: 50px;
+        font-family: "Kaushan Script", cursive;
+        color: #e7e7de;
+      }
+      .btn {
+        text-transform: lowercase;
+        font-family: "Kaushan Script", cursive;
+        font-size: 15px;
+        color: black;
+      }
+    }
+  }
+}
+.sun {
+  margin-left: 10px;
+}
+.moon {
+  margin-left: 10px;
+}
+@media only screen and (max-width: 830px) {
+  .main_header {
+    flex-direction: column;
+    height: 20vh !important;
+  }
+  .navLinks {
+    width: 100% !important;
+    padding-right: 0 !important;
+  }
+  .list {
+    width: 100% !important;
+    justify-content: space-around !important;
+    li {
+      margin-top: 10px;
+      margin-bottom: 10px;
+      margin-left: 0 !important;
+    }
+  }
+  .theme {
+    width: 100% !important;
+    display: flex !important;
+    justify-content: space-around !important;
+    padding-left: 0 !important;
+  }
+}

@@ -1,0 +1,76 @@
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300&display=swap");
+.light {
+  .error_main {
+    font-family: "Source Sans Pro", sans-serif;
+    background-color: #cfdac8;
+    min-height: 88vh;
+    max-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .page_not_found {
+      display: flex;
+      flex-direction: column;
+      width: 300px;
+      align-items: center;
+      margin-bottom: 20px;
+      margin-top: 20px;
+      padding: 30px;
+      box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.2);
+      border-radius: 10px;
+      position: relative;
+      z-index: 1;
+      overflow: hidden;
+    }
+    .page_not_found::before {
+      content: "";
+      position: absolute;
+      background: inherit;
+      z-index: -1;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      box-shadow: inset 0 0 2000px rgba(255, 255, 255, 0.5);
+      filter: blur(5px);
+      margin: -20px;
+    }
+  }
+}
+.dark {
+  .error_main {
+    color: #cfdac8;
+    background-color: #433d3c;
+    height: 88vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .page_not_found {
+      display: flex;
+      flex-direction: column;
+      width: 300px;
+      align-items: center;
+      margin-bottom: 20px;
+      margin-top: 20px;
+      padding: 30px;
+      box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.2);
+      border-radius: 10px;
+      position: relative;
+      z-index: 1;
+      overflow: hidden;
+    }
+    .page_not_found::before {
+      content: "";
+      position: absolute;
+      background: inherit;
+      z-index: -1;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      box-shadow: inset 0 0 2000px rgba(94, 92, 92, 0.5);
+      filter: blur(5px);
+      margin: -20px;
+    }
+  }
+}
